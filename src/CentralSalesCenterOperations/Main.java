@@ -3,8 +3,9 @@ package CentralSalesCenterOperations;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		/*Instantiate an object of the GenerateInfoFiles class, the constructor of the instance will 
+		 *create the .txt files with information about employees, products and orders
+		 */
+		GenerateInfoFiles newFiles = new GenerateInfoFiles();
 	}
-
 }
