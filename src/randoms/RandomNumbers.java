@@ -1,5 +1,11 @@
 package randoms;
 
+import java.util.ArrayList;
+import java.util.Random;
+
+import temps.Product;
+import temps.Seller;
+
 public class RandomNumbers {
 		//generate a 10-digit pseudorandom number using the math class
 	public long documentNumber(long lastNumber) {		
@@ -16,4 +22,45 @@ public class RandomNumbers {
     	int num = (int) (Math.random() * 21) + 10;;
 		return num;	
     }
+	
+	public int randomProducts() {
+    	int num = (int) (Math.random() * 51) + 50;
+		return num;	
+    }
+	
+	public long productPrice() {		
+		long price = (long) (Math.random() * 100_000L) + 1_000L;
+		return price;
+	}
+	
+	public int randomOrders() {
+    	int num = (int) (Math.random() * 9) + 2;
+		return num;	
+	}
+	
+	public int productPerOrder() {
+    	int num = (int) (Math.random() * 9) + 2;
+		return num;	
+	}
+	
+	public int qProductPerOrder() {
+    	int num = (int) (Math.random() * 9) + 1;
+		return num;
+	}
+	
+	public int randomIdProduct(ArrayList<Product> productList) {
+		Random random = new Random();
+		int num = random.nextInt(productList.size());
+		if(num==0) {
+			randomIdProduct(productList);
+		}
+		return num;	
+	}
+	
+	public int randomIdSeller(ArrayList<Seller> sellerList) {
+		Random random = new Random();
+		int num = random.nextInt(sellerList.size());
+		return num;
+	}
+	
 }

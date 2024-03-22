@@ -21,6 +21,24 @@ public class RandomNames {
         "Castro", "Fernández", "Cruz", "Aguilar", "Mendoza", "Salazar", "Arias", "Campos", "Rojas", "Guerrero",
         "Vargas", "Mora", "Delgado", "Contreras", "Núñez", "Peña", "Benítez", "Santos", "Herrera"
     };
+	private String[] stationeryProducts = {
+            "Cuaderno", "Lápiz", "Pluma", "Borrador", "Sacapuntas", "Regla", "Cinta adhesiva",
+            "Pegamento", "Tijeras", "Goma de borrar", "Marcadores", "Resaltador", "Calculadora",
+            "Papel", "Carpeta", "Clips", "Grapas", "Lápices de colores", "Corrector líquido",
+            "Bolígrafo", "Post-it", "Agenda", "Block de notas", "Pizarra blanca", "Rotuladores",
+            "Estuche", "Pincel", "Papel de carta", "Sellos", "Caja de cartón", "Carpeta clasificadora",
+            "Plastificadora", "Bandeja organizadora", "Etiquetas", "Bolígrafo de gel", "Tabla de cortar",
+            "Puntero láser", "Grapadora", "Portaminas", "Tiza", "Papelera", "Cizalla", "Clasificadores",
+            "Cartulina", "Perforadora", "Libreta", "Encuadernadora", "Cinta correctora", "Cartuchos de tinta",
+            "Rotulador permanente"
+    };
+	private String[] characteristics = {
+			"Resistente al desgaste","Reciclable","Ecológico","Borrado fácil","No mancha","A prueba de agua","Diseño ergonómico",
+		    "Compacto","Ligero","Duradero","Fácil de transportar","Multifuncional","Resistente a la rotura","Libre de ácido",
+		    "Antideslizante","Alta calidad","Suave al tacto","Brilloso","Sin olor","Colores vibrantes","Económico","No tóxico"
+	};
+	
+	
 	//get a random name from the array of firstName
 	public String firstName() {
 		/*First, a random index is obtained within the number of indexes of the array and then .
@@ -50,5 +68,19 @@ public class RandomNames {
 		int randomType = random.nextInt(documentTypes.length);
 		String Type =documentTypes[randomType];
 		return Type;
+	}
+	
+	public String stationeryProduct() {
+		Random random = new Random();
+		int randomNumberProduct = random.nextInt(stationeryProducts.length);
+		String randomProduct =stationeryProducts[randomNumberProduct];
+		return randomProduct;
+	}
+	
+	public String characteristicsProduct() {
+		Random random = new Random();
+		int randomcharacProduct = random.nextInt(characteristics.length);
+		String characProduct =characteristics[randomcharacProduct];
+		return characProduct;
 	}
 }

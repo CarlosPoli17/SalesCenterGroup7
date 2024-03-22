@@ -1,0 +1,67 @@
+IDProducto,NombreProducto,PrecioPorUnidadProducto
+1,Goma de borrar Libre de ácido,75122
+2,Plastificadora Fácil de transportar,16543
+3,Goma de borrar Ecológico,84828
+4,Tiza Económico,45599
+5,Block de notas Duradero,67339
+6,Goma de borrar Suave al tacto,67595
+7,Estuche Antideslizante,51055
+8,Lápiz Económico,31026
+9,Clips Diseño ergonómico,31705
+10,Pizarra blanca Ecológico,32129
+11,Calculadora Resistente al desgaste,58829
+12,Papel Duradero,35054
+13,Bolígrafo de gel Alta calidad,79294
+14,Marcadores Económico,4690
+15,Marcadores Libre de ácido,28698
+16,Grapas Reciclable,9119
+17,Calculadora Brilloso,93645
+18,Papel de carta Fácil de transportar,26867
+19,Pluma Diseño ergonómico,61438
+20,Cuaderno Multifuncional,48465
+21,Cinta adhesiva Resistente al desgaste,11808
+22,Regla A prueba de agua,48045
+23,Portaminas Ecológico,72228
+24,Cartuchos de tinta Económico,38274
+25,Marcadores Libre de ácido,65294
+26,Tabla de cortar Multifuncional,19659
+27,Etiquetas Compacto,86070
+28,Agenda Duradero,15837
+29,Marcadores Sin olor,98479
+30,Lápices de colores Económico,11707
+31,Tabla de cortar Multifuncional,73385
+32,Lápiz Fácil de transportar,7137
+33,Cartulina Diseño ergonómico,74305
+34,Rotuladores Ligero,80249
+35,Plastificadora Reciclable,48570
+36,Papelera Resistente a la rotura,50191
+37,Carpeta Libre de ácido,97537
+38,Cinta adhesiva No mancha,7664
+39,Pluma Reciclable,76273
+40,Goma de borrar Brilloso,74635
+41,Cartuchos de tinta A prueba de agua,34351
+42,Pegamento Ecológico,83643
+43,Sacapuntas Resistente a la rotura,30222
+44,Lápices de colores Antideslizante,67300
+45,Sacapuntas Diseño ergonómico,83715
+46,Borrador Reciclable,94197
+47,Calculadora Duradero,27705
+48,Bandeja organizadora No mancha,16888
+49,Plastificadora Resistente a la rotura,60782
+50,Borrador Suave al tacto,38421
+51,Cizalla Reciclable,19102
+52,Grapadora Sin olor,97374
+53,Plastificadora Ecológico,85447
+54,Carpeta clasificadora Compacto,98305
+55,Lápices de colores Alta calidad,46384
+56,Pizarra blanca Económico,19388
+57,Rotulador permanente Colores vibrantes,30239
+58,Clasificadores Ecológico,45570
+59,Pizarra blanca Duradero,97048
+60,Tijeras Fácil de transportar,51578
+61,Papel Resistente a la rotura,70895
+62,Pincel Libre de ácido,81355
+63,Cinta adhesiva Multifuncional,70723
+64,Portaminas Alta calidad,89839
+65,Portaminas Borrado fácil,100226
+66,Pizarra blanca Suave al tacto,69475

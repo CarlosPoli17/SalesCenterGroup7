@@ -16,6 +16,7 @@ public class GenerateInfoFiles {
 	private RandomNames randomName ;
 	private RandomNumbers randomNumber;
 	private ArrayList <Seller> salesMenList ;
+	private ArrayList <Product> productList ;
 	
 	
 	
@@ -26,6 +27,7 @@ public class GenerateInfoFiles {
 		this.randomName = new RandomNames();
 		this.randomNumber = new RandomNumbers();
 		this.salesMenList = new ArrayList<>();
+		this.productList = new ArrayList<>();
 		/*From the constructor we call the methods of the class in a chain and at the end it will return true if the files
 		 *  were exported or false if there was an error.
 		 */
@@ -36,7 +38,7 @@ public class GenerateInfoFiles {
 	 */
 	public void createFiles() {
 		//If all three methods return true
-		if (createSalesManInfoFile())
+		if (createSalesManInfoFile()&&createProductsFile()&&createSalesMenFile())
 			System.out.println("Los ficheros se han exportado correctamente.");	
 		else 
 			System.out.println("Ocurrio un error al exportar los ficheros.");
@@ -92,4 +94,54 @@ public class GenerateInfoFiles {
   	//If the loop and file export were executed, return true
   	return true; 
 	}
+	
+	public boolean createProductsFile(){
+		String productInfo=null;
+		int qProducts =randomNumber.randomProducts();
+    	try (BufferedWriter writer = new BufferedWriter(new FileWriter("ProductsInfo.txt"))) {
+    		for (int i=0;i<qProducts;i++) {
+    			Product product=new Product();
+    	        if(i==0) {	
+    	        	/*DocumentType,DocumentId,FirstName,LastName*/
+    	        	productInfo="IDProducto,NombreProducto,PrecioPorUnidadProducto";
+    	        	writer.write(productInfo);
+    	        	writer.newLine();
+    	        }else
+    	        	writer.newLine();
+    	        	product.setId(i+1);
+    	        	product.setProductName(randomName.stationeryProduct()+" "+randomName.characteristicsProduct());;
+    	        	product.setProductPrice(randomNumber.productPrice());;
+    	        	productInfo= product.getId()+","+product.getProductName()+","+product.getProductPrice();
+        			writer.write(productInfo);
+        			productList.add(product);
+    	    }
+    	}catch (IOException e) {
+    		System.err.println("error exporting file: " + e.getMessage()); 
+    		return false;
+    	}
+    	return true;
+    }
+	
+	public boolean createSalesMenFile() {
+		String orderInfo=null;
+		int qOrders =(int) salesMenList.size()/2;	    
+    	for (int i=0;i<qOrders;i++) {
+    		int idSeller=randomNumber.randomIdSeller(salesMenList);
+    	    try (BufferedWriter writer = new BufferedWriter(new FileWriter("Orders/Order0"+i+".txt"))){
+    	    	orderInfo=salesMenList.get(idSeller).getDocumentType()+","+salesMenList.get(idSeller).getDocumentNumber();
+    	    	writer.write(orderInfo);
+        	    writer.newLine();
+    	    	for(int j=0;j<randomNumber.productPerOrder();j++) {
+    	    		orderInfo=randomNumber.randomIdProduct(productList)+","+randomNumber.qProductPerOrder();
+    	    		writer.write(orderInfo);
+    	    		writer.newLine();
+    	    	}
+    	    }catch (IOException e) {
+    	    	System.err.println("error exporting file: " + e.getMessage());
+    	    	return false;
+    	    }
+    	}
+    	return true;
+	}
+	
 }
