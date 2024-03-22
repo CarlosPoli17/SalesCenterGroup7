@@ -61,7 +61,7 @@ public class GenerateInfoFiles {
   	        if(i==0) {	
   	        	/*the first line i=0 corresponds to the headers of the .txt file
   	        	 * DocumentType,DocumentId,FirstName,LastName*/
-  	        	sellerInfo="TipoDocumento,NúmeroDocumento,NombresVendedor,ApellidosVendedor";
+  	        	sellerInfo="TipoDocumento;NúmeroDocumento;NombresVendedor;ApellidosVendedor";
   	        	//write headers to file
   	        	writer.write(sellerInfo);
   	        	//write line break to file
@@ -80,7 +80,7 @@ public class GenerateInfoFiles {
   	        	//get a random last name
   	        	seller.setLastName(randomName.lastName());
   	        	//prepare the seller data on a new line using the get methods of the instance.
-  	        	sellerInfo= seller.getDocumentType()+","+seller.getDocumentNumber()+","+seller.getFirstName()+","+seller.getLastName();
+  	        	sellerInfo= seller.getDocumentType()+";"+seller.getDocumentNumber()+";"+seller.getFirstName()+";"+seller.getLastName();
       			//write the line to the file
   	        	writer.write(sellerInfo);
   	        	//Save the instance with the seller's data in the ArrayList for later use.
@@ -103,7 +103,7 @@ public class GenerateInfoFiles {
     			Product product=new Product();
     	        if(i==0) {	
     	        	/*DocumentType,DocumentId,FirstName,LastName*/
-    	        	productInfo="IDProducto,NombreProducto,PrecioPorUnidadProducto";
+    	        	productInfo="IDProducto;NombreProducto;PrecioPorUnidadProducto";
     	        	writer.write(productInfo);
     	        	writer.newLine();
     	        }else
@@ -111,7 +111,7 @@ public class GenerateInfoFiles {
     	        	product.setId(i+1);
     	        	product.setProductName(randomName.stationeryProduct()+" "+randomName.characteristicsProduct());;
     	        	product.setProductPrice(randomNumber.productPrice());;
-    	        	productInfo= product.getId()+","+product.getProductName()+","+product.getProductPrice();
+    	        	productInfo= product.getId()+";"+product.getProductName()+";"+product.getProductPrice();
         			writer.write(productInfo);
         			productList.add(product);
     	    }
@@ -128,11 +128,11 @@ public class GenerateInfoFiles {
     	for (int i=0;i<qOrders;i++) {
     		int idSeller=randomNumber.randomIdSeller(salesMenList);
     	    try (BufferedWriter writer = new BufferedWriter(new FileWriter("Orders/Order0"+i+".txt"))){
-    	    	orderInfo=salesMenList.get(idSeller).getDocumentType()+","+salesMenList.get(idSeller).getDocumentNumber();
+    	    	orderInfo=salesMenList.get(idSeller).getDocumentType()+";"+salesMenList.get(idSeller).getDocumentNumber();
     	    	writer.write(orderInfo);
         	    writer.newLine();
     	    	for(int j=0;j<randomNumber.productPerOrder();j++) {
-    	    		orderInfo=randomNumber.randomIdProduct(productList)+","+randomNumber.qProductPerOrder();
+    	    		orderInfo=randomNumber.randomIdProduct(productList)+";"+randomNumber.qProductPerOrder();
     	    		writer.write(orderInfo);
     	    		writer.newLine();
     	    	}
