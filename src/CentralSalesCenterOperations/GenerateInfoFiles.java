@@ -17,9 +17,7 @@ public class GenerateInfoFiles {
 	private RandomNumbers randomNumber;
 	private ArrayList <Seller> salesMenList ;
 	private ArrayList <Product> productList ;
-	
-	
-	
+
 	/*class constructor
 	*upon instantiation creates instances of the classes RandomNames, RandomNumbers and creates two ArrayLists to store 
 	*instances of with employees and individual products.*/
@@ -39,11 +37,11 @@ public class GenerateInfoFiles {
 	public void createFiles() {
 		//If all three methods return true
 		if (createSalesManInfoFile()&&createProductsFile()&&createSalesMenFile())
-			System.out.println("Los ficheros se han exportado correctamente.");	
+			System.out.println("the files have been exported successfully.");	
 		else 
-			System.out.println("Ocurrio un error al exportar los ficheros.");
+			System.out.println("An error occurred when exporting the files.");
 	}
-	
+
 	public boolean createSalesManInfoFile(){
 		//in sellerInfo the lines that the .txt file will contain are assigned
 		String sellerInfo=null;
@@ -96,51 +94,86 @@ public class GenerateInfoFiles {
 	}
 	
 	public boolean createProductsFile(){
+		//in productInfo the lines that the .txt file will contain are assigned
 		String productInfo=null;
+		/*Creates a random number for the products in the product list, by calling the method on 
+		 * the RandonNumbers class instance created by the constructor.
+		 */
 		int qProducts =randomNumber.randomProducts();
+		//initializes a BufferedWriter to write to the ProductsInfo.txt file
     	try (BufferedWriter writer = new BufferedWriter(new FileWriter("ProductsInfo.txt"))) {
+    		/*Through a loop we create instances of the products class, the conditional of the loop 
+    		 * is the variable qProducts
+    		 */
     		for (int i=0;i<qProducts;i++) {
     			Product product=new Product();
+    			/*In the first line of the .txt file we write the headers*/
     	        if(i==0) {	
-    	        	/*DocumentType,DocumentId,FirstName,LastName*/
     	        	productInfo="IDProducto;NombreProducto;PrecioPorUnidadProducto";
     	        	writer.write(productInfo);
     	        	writer.newLine();
     	        }else
     	        	writer.newLine();
     	        	product.setId(i+1);
+    	        	/*For each product instance, a characteristic and a pseudo-random price are given and the 
+    	        	 * corresponding attribute is changed.*/
     	        	product.setProductName(randomName.stationeryProduct()+" "+randomName.characteristicsProduct());;
     	        	product.setProductPrice(randomNumber.productPrice());;
+    	        	/*prepare the line that will be written to the file*/
     	        	productInfo= product.getId()+";"+product.getProductName()+";"+product.getProductPrice();
+    	        	/*write the line to the file and give a line break*/
         			writer.write(productInfo);
+        			/*save the product instance in an array to use in creating orders*/
         			productList.add(product);
     	    }
     	}catch (IOException e) {
-    		System.err.println("error exporting file: " + e.getMessage()); 
+    		System.err.println("error exporting file: " + e.getMessage());
+    		//catch the exception, print to console and return false
     		return false;
     	}
+    	//If the loop and file export were executed, return true
     	return true;
     }
 	
 	public boolean createSalesMenFile() {
+		//in orderInfo the lines that the .txt file will contain are assigned
 		String orderInfo=null;
-		int qOrders =(int) salesMenList.size()/2;	    
+		/*generates a random number to define how many order orders will be generated, this number is divided into two depending on how
+		 *  many sellers were previously created*/
+		int qOrders =(int) salesMenList.size()/2;
+		/*Through a cycle, create the number of orders, each order is associated with the ID number of a seller, which is selected randomly 
+		 * in the arraylist of sellers previously created, for this we send the ArrayList as a parameter.
+		 */
     	for (int i=0;i<qOrders;i++) {
     		int idSeller=randomNumber.randomIdSeller(salesMenList);
+    		/*initializes a BufferedWriter to write to the file Order0+i.txt, this causes us to have dynamic names for each file; 
+    		 * The files are created in the Orders folder.
+    		 */
     	    try (BufferedWriter writer = new BufferedWriter(new FileWriter("Orders/Order0"+i+".txt"))){
+    	    	/*We obtain the attributes of the instantiated seller through its document 
+    	    	 * number and write it as the order header
+    	    	 */
     	    	orderInfo=salesMenList.get(idSeller).getDocumentType()+";"+salesMenList.get(idSeller).getDocumentNumber();
     	    	writer.write(orderInfo);
         	    writer.newLine();
+        	    /*Through a cycle, a random id is selected from the list of products and a pseudo random number of the 
+        	     * quantity sold of the product is generated.
+        	     */
     	    	for(int j=0;j<randomNumber.productPerOrder();j++) {
+    	    		/*prepares the line to write to the file and the line is 
+    	    		 * written to the file and then a line break
+    	    		 */
     	    		orderInfo=randomNumber.randomIdProduct(productList)+";"+randomNumber.qProductPerOrder();
     	    		writer.write(orderInfo);
     	    		writer.newLine();
     	    	}
     	    }catch (IOException e) {
     	    	System.err.println("error exporting file: " + e.getMessage());
+    	    	//catch the exception, print to console and return false
     	    	return false;
     	    }
     	}
+    	//If the loop and file export were executed, return true
     	return true;
 	}
 	

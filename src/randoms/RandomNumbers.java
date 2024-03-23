@@ -22,32 +22,32 @@ public class RandomNumbers {
     	int num = (int) (Math.random() * 21) + 10;;
 		return num;	
     }
-	
+	//obtain a pseudo random number in a range between 50 and 100 (number of products in the list)
 	public int randomProducts() {
     	int num = (int) (Math.random() * 51) + 50;
 		return num;	
     }
-	
+	//obtain a pseudo random number in a range between 1000 and 10000 (price of a product)
 	public long productPrice() {		
 		long price = (long) (Math.random() * 100_000L) + 1_000L;
 		return price;
 	}
-	
+	//obtain a pseudo random number in a range between 2 and 10 (number of orders)
 	public int randomOrders() {
     	int num = (int) (Math.random() * 9) + 2;
 		return num;	
 	}
-	
+	//obtain a pseudo random number in a range between 2 and 10 (number of items in the order)
 	public int productPerOrder() {
     	int num = (int) (Math.random() * 9) + 2;
 		return num;	
 	}
-	
+	//obtain a pseudo random number in a range between 1 and 10 (quantity ordered per order items)
 	public int qProductPerOrder() {
     	int num = (int) (Math.random() * 9) + 1;
 		return num;
 	}
-	
+	//get a random id from the list of products, if the id is repeated then we recursively look for another id
 	public int randomIdProduct(ArrayList<Product> productList) {
 		Random random = new Random();
 		int num = random.nextInt(productList.size());
@@ -56,7 +56,7 @@ public class RandomNumbers {
 		}
 		return num;	
 	}
-	
+	//get a random document number from the seller list
 	public int randomIdSeller(ArrayList<Seller> sellerList) {
 		Random random = new Random();
 		int num = random.nextInt(sellerList.size());

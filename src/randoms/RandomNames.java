@@ -21,6 +21,7 @@ public class RandomNames {
         "Castro", "Fernández", "Cruz", "Aguilar", "Mendoza", "Salazar", "Arias", "Campos", "Rojas", "Guerrero",
         "Vargas", "Mora", "Delgado", "Contreras", "Núñez", "Peña", "Benítez", "Santos", "Herrera"
     };
+	//Arraylist stationeryProducts
 	private String[] stationeryProducts = {
             "Cuaderno", "Lápiz", "Pluma", "Borrador", "Sacapuntas", "Regla", "Cinta adhesiva",
             "Pegamento", "Tijeras", "Goma de borrar", "Marcadores", "Resaltador", "Calculadora",
@@ -32,6 +33,7 @@ public class RandomNames {
             "Cartulina", "Perforadora", "Libreta", "Encuadernadora", "Cinta correctora", "Cartuchos de tinta",
             "Rotulador permanente"
     };
+	//Arraylist characteristics
 	private String[] characteristics = {
 			"Resistente al desgaste","Reciclable","Ecológico","Borrado fácil","No mancha","A prueba de agua","Diseño ergonómico",
 		    "Compacto","Ligero","Duradero","Fácil de transportar","Multifuncional","Resistente a la rotura","Libre de ácido",
@@ -69,14 +71,14 @@ public class RandomNames {
 		String Type =documentTypes[randomType];
 		return Type;
 	}
-	
+	//get a random product from the array of stationeryProducts
 	public String stationeryProduct() {
 		Random random = new Random();
 		int randomNumberProduct = random.nextInt(stationeryProducts.length);
 		String randomProduct =stationeryProducts[randomNumberProduct];
 		return randomProduct;
 	}
-	
+	//get a random feature from the array of characteristics
 	public String characteristicsProduct() {
 		Random random = new Random();
 		int randomcharacProduct = random.nextInt(characteristics.length);
