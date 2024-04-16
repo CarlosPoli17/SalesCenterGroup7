@@ -1,5 +1,6 @@
 package CentralSalesCenterOperations;
 
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -11,5 +12,9 @@ public class Main {
 		 * imports the .txt files created by the GenerateInfoFiles class with information about employees, products and orders.
 		 */
 		GenerateSalesReport salesReport = new GenerateSalesReport();
+
+		salesReport.GenerateReportsSales(newFiles.productList, newFiles.salesMenList, newFiles.orderList);
+		
+		
 	}
 }
