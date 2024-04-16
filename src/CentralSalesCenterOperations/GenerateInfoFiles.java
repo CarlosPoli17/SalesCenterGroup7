@@ -7,6 +7,7 @@ import java.io.IOException;
 //import classes to obtain pseudo random numbers and names
 import randoms.RandomNames;
 import randoms.RandomNumbers;
+import temps.Order;
 //import classes to instantiate employees and products
 import temps.Product;
 import temps.Seller;
@@ -15,9 +16,10 @@ import java.util.ArrayList;
 public class GenerateInfoFiles {
 	private RandomNames randomName ;
 	private RandomNumbers randomNumber;
-	private ArrayList <Seller> salesMenList ;
-	private ArrayList <Product> productList ;
-
+	public ArrayList <Seller> salesMenList ;
+	public ArrayList <Product> productList ;
+	public ArrayList <Order> orderList ;
+	
 	/*class constructor
 	*upon instantiation creates instances of the classes RandomNames, RandomNumbers and creates two ArrayLists to store 
 	*instances of with employees and individual products.*/
@@ -26,6 +28,7 @@ public class GenerateInfoFiles {
 		this.randomNumber = new RandomNumbers();
 		this.salesMenList = new ArrayList<>();
 		this.productList = new ArrayList<>();
+		this.orderList = new ArrayList<>();
 		/*From the constructor we call the methods of the class in a chain and at the end it will return true if the files
 		 *  were exported or false if there was an error.
 		 */
@@ -145,6 +148,7 @@ public class GenerateInfoFiles {
 		 * in the arraylist of sellers previously created, for this we send the ArrayList as a parameter.
 		 */
     	for (int i=0;i<qOrders;i++) {
+			
     		int idSeller=randomNumber.randomIdSeller(salesMenList);
     		/*initializes a BufferedWriter to write to the file Order0+i.txt, this causes us to have dynamic names for each file; 
     		 * The files are created in the Orders folder.
@@ -163,9 +167,17 @@ public class GenerateInfoFiles {
     	    		/*prepares the line to write to the file and the line is 
     	    		 * written to the file and then a line break
     	    		 */
-    	    		orderInfo=randomNumber.randomIdProduct(productList)+";"+randomNumber.qProductPerOrder();
+					Order order=new Order();
+					order.setId(i+1);
+					order.setDocumentType(salesMenList.get(idSeller).getDocumentType());
+    	    		order.setDocumentNumber(salesMenList.get(idSeller).getDocumentNumber());
+					order.setProductId(randomNumber.randomIdProduct(productList));
+					order.setQuantity(randomNumber.qProductPerOrder());
+
+					orderInfo=order.getProductId()+";"+order.getQuantity();
     	    		writer.write(orderInfo);
     	    		writer.newLine();
+					orderList.add(order);
     	    	}
     	    }catch (IOException e) {
     	    	System.err.println("error exporting file: " + e.getMessage());
