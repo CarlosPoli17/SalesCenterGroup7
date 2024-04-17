@@ -57,10 +57,14 @@ public class RandomNumbers {
 		return num;	
 	}
 	//get a random document number from the seller list
-	public int randomIdSeller(ArrayList<Seller> sellerList) {
+	public int randomIdSeller(ArrayList<Seller> sellerList, ArrayList<Integer> last) {
 		Random random = new Random();
-		int num = random.nextInt(sellerList.size());
-		return num;
+		int num = random.nextInt((sellerList.size())-1)+1;
+		/*If the seller number already appeared in another iteration, look for another one from the list*/
+		while(last.contains(num)){
+			num = random.nextInt((sellerList.size())-1)+1;
+		}
+	return num;	
 	}
 	
 }

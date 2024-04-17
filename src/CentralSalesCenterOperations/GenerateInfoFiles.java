@@ -144,8 +144,12 @@ public class GenerateInfoFiles {
 		/*Through a cycle, create the number of orders, each order is associated with the ID number of a seller, which is selected randomly 
 		 * in the arraylist of sellers previously created, for this we send the ArrayList as a parameter.
 		 */
+		//create a list with sellers who have already left randomly
+		ArrayList<Integer> lastIdSellers = new ArrayList<Integer>();
     	for (int i=0;i<qOrders;i++) {
-    		int idSeller=randomNumber.randomIdSeller(salesMenList);
+    		Integer idSeller=randomNumber.randomIdSeller(salesMenList,lastIdSellers);
+    		//We add the seller that was reported to the list
+    		lastIdSellers.add(idSeller);
     		/*initializes a BufferedWriter to write to the file Order0+i.txt, this causes us to have dynamic names for each file; 
     		 * The files are created in the Orders folder.
     		 */

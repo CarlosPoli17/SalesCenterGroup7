@@ -1,0 +1,6 @@
+NombreVendedor;VentasTotalMes
+Sofía Dominguez;603140
+Alejandro Delgado;2329017
+Verónica Fernández;1254441
+Paula Rojas;444199
+Pedro Serrano;1445669
