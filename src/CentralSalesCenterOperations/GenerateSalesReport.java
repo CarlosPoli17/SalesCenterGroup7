@@ -21,9 +21,9 @@ public class GenerateSalesReport {
 	public GenerateSalesReport() {	
 		// Constructor method that reads seller information, product information, orders and Generate a sales report sorted.
 		if (salesMenRead()&&productListRead()&&ordersRead()&&report())
-			System.out.println("Se generó y exportó el reporte de ventas correctamente.");	
+			System.out.println("The sales report was generated and exported correctly.");	
 		else 
-			System.out.println("Ocurrio un error al generar el reporte de ventas.");
+			System.out.println("An error occurred while generating the sales report.");
 	}	
 	/*With this method, we achieve, on one hand, creating an ArrayList with the available
 	 *  sales report for use, and on the other hand, generating the same sales report and exporting 

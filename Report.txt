@@ -1,6 +1,13 @@
 NombreVendedor;VentasTotalMes
-Sofía Dominguez;603140
-Alejandro Delgado;2329017
-Verónica Fernández;1254441
-Paula Rojas;444199
-Pedro Serrano;1445669
+Lucía Dominguez;399369
+Carlos Vargas;1029447
+Natalia López;1479305
+Patricia Ramírez;322089
+Daniela Vega;834392
+David Castro;1450071
+Gustavo Ramos;1649086
+Alejandro Torres;1809749
+Joaquín Vega;1451734
+Beatriz Santos;415352
+Pedro Castro;1201749
+Patricia Ramos;978383
