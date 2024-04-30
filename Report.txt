@@ -1,13 +1,6 @@
 NombreVendedor;VentasTotalMes
-Lucía Dominguez;399369
-Carlos Vargas;1029447
-Natalia López;1479305
-Patricia Ramírez;322089
-Daniela Vega;834392
-David Castro;1450071
-Gustavo Ramos;1649086
-Alejandro Torres;1809749
-Joaquín Vega;1451734
-Beatriz Santos;415352
-Pedro Castro;1201749
-Patricia Ramos;978383
+Juan Reyes;2225700
+Eva Guerrero;1687257
+Javier Campos;1336557
+Ricardo Ruiz;1295363
+José Silva;1004917

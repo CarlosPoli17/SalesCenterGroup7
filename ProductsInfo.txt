@@ -1,58 +1,61 @@
 IDProducto;NombreProducto;PrecioPorUnidadProducto
-1;Borrador No tóxico;60755
-2;Cinta correctora Borrado fácil;60774
-3;Papel No tóxico;8948
-4;Puntero láser No mancha;54269
-5;Rotuladores No tóxico;81875
-6;Calculadora Ecológico;58873
-7;Goma de borrar Brilloso;33226
-8;Puntero láser Borrado fácil;59781
-9;Clasificadores Reciclable;9648
-10;Cinta adhesiva Brilloso;18582
-11;Post-it Compacto;6390
-12;Bolígrafo Ecológico;29499
-13;Puntero láser Alta calidad;76522
-14;Sacapuntas No tóxico;51292
-15;Grapas Borrado fácil;98087
-16;Pizarra blanca Antideslizante;89928
-17;Portaminas A prueba de agua;29099
-18;Carpeta clasificadora Alta calidad;97014
-19;Grapas Compacto;83291
-20;Goma de borrar No tóxico;36590
-21;Post-it Brilloso;2576
-22;Calculadora Fácil de transportar;80774
-23;Portaminas A prueba de agua;24401
-24;Cartuchos de tinta Sin olor;84890
-25;Papelera Alta calidad;84392
-26;Corrector líquido Resistente a la rotura;90853
-27;Pluma Duradero;24032
-28;Calculadora Resistente al desgaste;28787
-29;Block de notas Fácil de transportar;8602
-30;Etiquetas Resistente a la rotura;60014
-31;Bolígrafo No mancha;97505
-32;Libreta Compacto;97827
-33;Resaltador Borrado fácil;44487
-34;Papelera Suave al tacto;87926
-35;Tiza Alta calidad;62575
-36;Pluma No mancha;49228
-37;Post-it Diseño ergonómico;43012
-38;Post-it Resistente a la rotura;3294
-39;Cuaderno Alta calidad;20592
-40;Cartulina Ecológico;31083
-41;Papelera Duradero;82934
-42;Carpeta Reciclable;27541
-43;Clasificadores Antideslizante;8078
-44;Pincel Sin olor;5149
-45;Puntero láser Libre de ácido;14756
-46;Caja de cartón Duradero;68443
-47;Corrector líquido Antideslizante;30617
-48;Pincel A prueba de agua;23260
-49;Papelera No tóxico;35153
-50;Bolígrafo de gel Económico;41687
-51;Borrador Brilloso;51971
-52;Pincel Ecológico;10119
-53;Borrador Duradero;37125
-54;Grapadora Brilloso;91133
-55;Calculadora Ligero;100538
-56;Cartulina Diseño ergonómico;17010
-57;Cinta correctora Resistente al desgaste;71832
+1;Plastificadora Sin olor;84984
+2;Tabla de cortar Alta calidad;97972
+3;Post-it Alta calidad;47834
+4;Estuche Duradero;32511
+5;Perforadora No mancha;66161
+6;Cizalla Resistente a la rotura;65306
+7;Marcadores Suave al tacto;71489
+8;Carpeta Diseño ergonómico;62695
+9;Rotulador permanente Antideslizante;9664
+10;Regla Reciclable;13819
+11;Agenda Suave al tacto;28362
+12;Cuaderno Resistente a la rotura;83193
+13;Cartuchos de tinta Colores vibrantes;75983
+14;Papel de carta Multifuncional;63587
+15;Cartuchos de tinta Ecológico;37201
+16;Pizarra blanca Resistente al desgaste;87949
+17;Bandeja organizadora Compacto;92872
+18;Tijeras No mancha;84381
+19;Regla Borrado fácil;1179
+20;Bolígrafo de gel Brilloso;31162
+21;Goma de borrar No tóxico;86524
+22;Grapadora Resistente a la rotura;77222
+23;Libreta No mancha;40447
+24;Marcadores Alta calidad;1327
+25;Lápices de colores A prueba de agua;71643
+26;Tijeras Libre de ácido;56405
+27;Sacapuntas Resistente al desgaste;40815
+28;Cinta adhesiva Duradero;76062
+29;Estuche Libre de ácido;20563
+30;Cinta adhesiva Fácil de transportar;52412
+31;Grapas Fácil de transportar;84828
+32;Block de notas Borrado fácil;48114
+33;Cinta correctora No tóxico;49575
+34;Rotulador permanente Colores vibrantes;3124
+35;Tijeras Económico;13615
+36;Tijeras Resistente a la rotura;86499
+37;Pluma Reciclable;31858
+38;Clips Ecológico;25856
+39;Estuche Multifuncional;53176
+40;Portaminas Económico;98388
+41;Puntero láser Antideslizante;70694
+42;Cartuchos de tinta Reciclable;65923
+43;Puntero láser Multifuncional;27115
+44;Perforadora Reciclable;87102
+45;Libreta No mancha;44120
+46;Caja de cartón Sin olor;98840
+47;Cinta correctora Duradero;69355
+48;Pizarra blanca Resistente a la rotura;59540
+49;Rotuladores Borrado fácil;62701
+50;Rotulador permanente Borrado fácil;22680
+51;Rotulador permanente Económico;44996
+52;Cinta adhesiva Diseño ergonómico;22361
+53;Regla Multifuncional;65830
+54;Carpeta Alta calidad;14762
+55;Carpeta clasificadora Diseño ergonómico;85218
+56;Perforadora Colores vibrantes;20422
+57;Tabla de cortar Brilloso;18760
+58;Lápices de colores Suave al tacto;42529
+59;Grapadora Suave al tacto;43023
+60;Cartulina Compacto;13238

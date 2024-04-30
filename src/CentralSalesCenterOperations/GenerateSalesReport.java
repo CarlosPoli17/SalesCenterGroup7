@@ -16,6 +16,9 @@ public class GenerateSalesReport {
 	private ArrayList<String[]> productList = new ArrayList<>();
 	// List to store the generated sales report
 	private ArrayList<ArrayList<String>> report = new ArrayList<>();
+	// List to store the sorted sales report
+	private ArrayList<ArrayList<String>> sortReport=new ArrayList<>();
+
 
 	
 	public GenerateSalesReport() {	
@@ -142,14 +145,18 @@ public class GenerateSalesReport {
     	    	/*We obtain the seller's identification number and send 
     	    	 * it as a parameter to obtain the two names, these will be written in the report
     	    	 */
-    	    	long idSeller=Long.valueOf(report.get(i).get(0));
+    	    	int index=sortReport();
+    	    	long idSeller=Long.valueOf(report.get(index).get(0));
     	    	String nameSeller=nameOf(idSeller);
     	    	// Move to a new line in the report file
     			writer.newLine();
     			// Get the vendor document number and total sales for the month from the report data
-    	        reportLines=nameSeller+";"+report.get(i).get(1);      
+    	        reportLines=nameSeller+";"+report.get(index).get(1);      
     	        // Write the vendor data to the report file
         		writer.write(reportLines); 
+        		sortReport.add(report.get(index));
+        		// Remove the sorted entry from the original ArrayList report
+        		report.remove(index);
     	    }
     	    // Return true indicating successful export of the report
     	    return true;	    
@@ -174,4 +181,25 @@ public class GenerateSalesReport {
 		}
 		return name;
 	}
+	public int sortReport() {
+		/* Method to find the highest sales value in the list and return it, then create a new list with the values sorted, 
+		*and delete the element from the original list.
+		*/
+		long higherValue=0;
+		long comparator = 0;
+		int indexOf=0;
+		// Loop through each entry in the report list
+		for (int i=0;i<report.size();i++) {
+			// Extract the total sales from the current entry
+			comparator = Long.valueOf(report.get(i).get(1));
+			// Compare the total sales with the highest value found so far
+			if(comparator>higherValue) {
+				// Update the highest value and the index of the entry with the highest sales
+				higherValue=comparator;
+				indexOf=i;
+			}		
+		}
+		return indexOf;
+	}
+
 }

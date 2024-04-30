@@ -1,0 +1,65 @@
+Resultados y aprendizajes 
+
+ 
+
+Lo aprendido durante el desarrollo del proyecto.  
+
+ 
+
+Reforzamos conceptos de la clase IO, que nos proporciona un conjunto de clases e interfaces para realizar operaciones de entrada y salida (I/O), Lectura y escritura de archivos, Buffers (BufferedReader / BufferedWriter) que mejoran la eficiencia al leer y escribir datos en memoria temporal antes de realizar la operación final. 
+
+también el uso de la clase Random vital para generar números pseudoaleatorios, el cual es uno de los requisitos de este trabajo. 
+
+Uso de clases tipo modelo de entidad, para una mayor facilidad de ubicación de datos. 
+
+Uso de ArrayList que utiliza un arreglo dinámico para almacenar elementos, el cual fue de mucho uso para el almacenamiento de los datos generados junto a las clases tipo entidad, nos permitieron poder realizar recorridos más precisos a los elementos de los ArrayList. 
+
+Los arreglos junto a la clase Random nos dieron la posibilidad de generar datos pseudoaleatorios con una base de datos precargada. 
+
+Uso de las clases String y sus funciones como split que nos sirvió para realizar cortes a partir de un delimitador. 
+
+ 
+
+ 
+
+Posibles aplicaciones en su vida profesional de las destrezas y conocimientos adquiridos y practicados durante el desarrollo del proyecto.  
+
+ 
+
+Los conocimientos adquiridos durante el desarrollo de este proyecto tienen numerosas aplicaciones en la vida profesional. Estas habilidades son fundamentales en la ingeniería de software y se pueden aplicar en varias áreas, desde el desarrollo de aplicaciones hasta el análisis de datos y la inteligencia artificial. 
+
+En el desarrollo de aplicaciones, la capacidad para leer, procesar y manipular datos provenientes de diferentes fuentes es esencial. Esto se refleja en las tareas de lectura de archivos de texto, como lo hemos hecho para obtener información de los vendedores, productos y pedidos en este proyecto. Además, el manejo de estructuras de datos, como listas y arrays, es crucial para organizar y manipular la información de manera efectiva, como lo hemos hecho para generar el reporte de ventas. 
+
+Ordenar información y generar reportes es de gran importancia. Este proyecto nos ha permitido practicar estas habilidades al calcular los subtotales de las órdenes de venta, ordenar el reporte de ventas de manera adecuada y exportarlo en un archivo de texto. 
+
+En el contexto de la inteligencia artificial, el manejo de datos estructurados y la implementación de algoritmos de procesamiento son habilidades claves. Aunque este proyecto no se enfoca específicamente en la inteligencia artificial, las habilidades adquiridas aquí sientan las bases para proyectos más avanzados en este campo. La capacidad para comprender y manipular datos es fundamental para el desarrollo de modelos de aprendizaje automático y sistemas inteligentes. 
+
+En resumen, las destrezas y conocimientos practicados en este proyecto son la base de muchos tipos de desarrollos de software, lo que abre unas varias posibilidades en el mundo del desarrollo. Estas habilidades son muy valoradas en el mercado laboral y te dan una base sólida para avanzar en el campo de la ingeniería de software y tecnología de la información. 
+
+ 
+
+Las dificultades presentadas durante el desarrollo del proyecto.  
+
+ 
+
+La experiencia en desarrollo de los tres integrantes de la entrega facilito la ejecución del proyecto, ya que el nivel de conocimiento del lenguaje JAVA es alto. 
+
+Entre las dificultades más relevantes estuvieron: 
+
+Entender cómo funcionaban las interfaces (BufferedReader / BufferedWriter) funcionalmente para insertar cabeceras, datos y saltos de línea. 
+
+Manejar la agregación de datos para manejar ArrayList dentro de otro ArrayList e instancias de clase dentro de ArrayList; entender como acceder a los datos dentro de los ArrayList, iterar con ellos y modificarlos.  
+
+Dada la complejidad que fue tomando el código, ordenar el informe de ventas final tuvo un nivel de dificultad alta, ya que no podíamos emplear los métodos convencionales como ArrayList.sort() porque el criterio de ordenación era un atributo dentro de los elementos del ArrayList, así que, tuvimos que ingeniar la forma de buscar el mayor valor de ventas del ArrayList, guardarlo en un nuevo ArrayList y eliminarlo, esto iterativamente hasta que quedara el último elemento (el menor valor). 
+
+Implementar desde el principio el manejo de errores fue fundamental para que al final se facilitara implementar las funcionalidades de validación opcionales, ya que de otro modo hubiera sido complejo modificar el código.  
+
+ 
+
+Conclusión 
+
+El desarrollo de este proyecto ha permitido el aprendizaje y su aplicación en el campo del desarrollo de software. Desde la lectura y procesamiento de datos hasta la generación de reportes y la implementación de algoritmos de ordenamiento. 
+
+A lo largo del proyecto, se comprendió la importancia de la organización y la planeación en el desarrollo de software, así como la necesidad de una resolución eficiente de problemas. Además, hemos podido evidenciar cómo nuestras habilidades técnicas pueden ser aplicadas en situaciones prácticas y cómo estas habilidades son fundamentales en numerosos campos de la ingeniería de software. 
+
+Este proyecto ha proporcionado un conocimiento practico sobre el manejo de datos y la generación de reportes en el lenguaje Java, que son de gran utilidad para su aplicación tanto en el ámbito académico como en la vida profesional.

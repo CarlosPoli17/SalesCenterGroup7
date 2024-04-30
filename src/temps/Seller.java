@@ -1,7 +1,9 @@
 package temps;
 
+
+
 public class Seller {
-	
+
 	/*Class attributes, a seller has document type, document number, first name and last name; 
 	 * getter and setter methods are added for each attribute.
 	 */

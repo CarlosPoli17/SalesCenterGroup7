@@ -1,6 +1,8 @@
 package temps;
 
-public class Product {
+
+
+public class Product{
 
 	/*Class attributes, a product has id, name and price; getter and setter methods 
 	 * are added for each attribute
